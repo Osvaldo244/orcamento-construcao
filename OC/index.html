@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão de Orçamento para Vedação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Previsão de Orçamento para Vedação de Terreno</h1>
+        <form id="orcamento-form">
+            <div class="input-group">
+                <label for="comprimento">Comprimento do Terreno (m):</label>
+                <input type="number" id="comprimento" value="30" required>
+            </div>
+            <div class="input-group">
+                <label for="largura">Largura do Terreno (m):</label>
+                <input type="number" id="largura" value="10" required>
+            </div>
+            <div class="input-group">
+                <label for="altura">Altura do Muro (m):</label>
+                <input type="number" id="altura" value="3" required>
+            </div>
+            <div class="input-group">
+                <label for="tipo-bloco">Tipo de Bloco:</label>
+                <select id="tipo-bloco">
+                    <option value="15">Bloco 15cm (250 Kz)</option>
+                    <option value="20">Bloco 20cm (350 Kz)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="preco-cimento">Preço por Saco de Cimento (Kz):</label>
+                <input type="number" id="preco-cimento" min="4500" max="6500" value="5500" required>
+            </div>
+            <button type="button" onclick="calcularOrcamento()">Calcular Orçamento</button>
+        </form>
+        <div id="resultado">
+            <h2>Orçamento:</h2>
+            <p id="orcamento-bloco"></p>
+            <p id="orcamento-cimento"></p>
+            <h3>Total: <span id="total-custo">0 Kz</span></h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
